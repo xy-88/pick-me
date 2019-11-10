@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<style>
+			* {
+			  margin: 0;
+			  padding: 0;
+			}
+			body{
+				background:url(img/pick.png) 
+				top left;
+				background-size:100%;}
+			div.box{
+				width:600px;
+				height:450px;
+				line-height:450px;
+				background-color:rgba(255,250,250,0.6);
+				border:1px solid #8B8989;
+				position:absolute;
+				left:20%;
+				top:35%;
+				border-radius:11px;
+			}
+			div h2.text{
+				font:normal bold 100px "Comic Sans MS";
+				color:rgb(153,50,204);
+				text-shadow:4px 4px 2px #CDB5CD;
+				position:absolute;
+				top:10px;
+				left:30%;
+			}
+			.user{
+				width:400px;
+				height:60px;
+				line-height:60px;
+				border:1.5px solid #8B8989;
+				font:normal normal 30px "幼圆";
+				margin:auto;
+				position:absolute;
+				left: 50%;top: 45%;
+				transform:translate(-50%,-50%);
+				border-radius:10px;
+			}
+			.psd{
+				width:400px;
+				height:60px;
+				line-height:60px;
+				border:1.5px solid #8B8989;
+				font-size:30px;
+				margin:auto;
+				position:absolute;
+				left: 50%;top: 65%;
+				transform:translate(-50%,-50%);
+				border-radius:10px;
+			}
+			.logn{
+				width:150px;
+				height:60px;
+				line-height:50px;
+				background-color:#7B68EE;
+				color:white;
+				font:normal bold 35px "幼圆";
+				border:1.5px solid white;
+				margin:auto;
+				position:absolute;
+				left: 50%;top: 85%;
+				transform:translate(-50%,-50%);
+				border-radius:15px;
+			}
+			.register{
+				width:100px;
+				height:60px;
+				line-height:60px;
+				background-color:rgba(153,50,204,0);
+				color:#CD0000;
+				font:normal bold 27px "幼圆";
+				border:1.5px solid white;
+				margin:auto;
+				position:absolute;
+				left: 12%;top: 90%;
+				transform:translate(-50%,-50%);
+				border-radius:15px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<h2 class="text">login</h2>
+			<form action="">
+			<input class="user" type="text" value="用户名/手机号">
+			<input class="psd" type="password">
+			<button class="logn" type="button">登录</button>
+			<button class="register" type="button" onclick="tz()">注册</button>
+		</div>
+		<script>
+			function tz(){
+				window.location.href='register.html';
+			}
+		</script>
+	</body>
+</html>

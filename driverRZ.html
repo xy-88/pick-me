@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+
+  <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=wqBXfIN3HkpM1AHKWujjCdsi"></script>
+  <script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .a{
+      width:100%;
+      height:120px;
+      line-height:120px;
+      background-color:rgba(193,205,193,0.3);
+      border:1.5px solid 	#CDC9C9;
+      text-align:center;
+      font:normal normal 65px "Yu Gothic UI Semibold";
+    }
+    .b{
+      width:100%;
+      height:100px;
+      line-height:110px;
+      border:1.5px solid 	#CDC9C9;
+      text-align: center;
+      font:normal normal 65px "微软雅黑";
+      position: absolute;
+      left: 0%;
+      top: 122px;
+    }
+    .back{
+      width:15%;
+      height:100px;
+      line-height:110px;
+      background-color:white;
+      border:1px solid white;
+      text-align:center;
+      font:normal bold 80px "黑体";
+      float:left;
+    }
+    .c{
+      text-align: center;
+      font:normal normal 35px "黑体";
+      color: darkorange;
+      position: absolute;
+      left: 5%;
+      top: 250px;
+    }
+
+    .photo{
+      text-align: center;
+      font:normal normal 40px "黑体";
+      color: black;
+      position: absolute;
+      left: 15%;
+      top: 425px;
+    }
+
+    .photo1{
+      text-align: center;
+      font:normal normal 40px "黑体";
+      color: black;
+      position: absolute;
+      left: 15%;
+      top: 600px;
+    }
+
+    .photo2{
+      text-align: center;
+      font:normal normal 40px "黑体";
+      color: black;
+      position: absolute;
+      left: 7%;
+      top: 880px;
+    }
+
+    .photo3{
+      text-align: center;
+      font:normal normal 40px "黑体";
+      color: black;
+      position: absolute;
+      left: 7%;
+      top: 1000px;
+    }
+    .photo4{
+      text-align: center;
+      font:normal normal 40px "黑体";
+      color: black;
+      position: absolute;
+      left: 7%;
+      top: 1120px;
+    }
+    .photo5{
+      text-align: center;
+      font:normal normal 33px "黑体";
+      color: black;
+      position: absolute;
+      left: 7%;
+      top: 1300px;
+    }
+    .photo6{
+      text-align: center;
+      font:normal normal 33px "黑体";
+      color: black;
+      position: absolute;
+      left: 7%;
+      top: 1420px;
+    }
+    .photo7{
+      text-align: center;
+      font:normal normal 33px "黑体";
+      color: black;
+      position: absolute;
+      left: 7%;
+      top: 1540px;
+    }
+    .d{
+      width:75%;
+      height:43px;
+      line-height:110px;
+      background-color: gainsboro;
+      border:1px solid black;
+      text-align: center;
+      font:normal normal 35px "黑体";
+      color: darkorange;
+      position: absolute;
+      left: 5%;
+      top: 770px;
+    }
+    .d1{
+       width:45%;
+       height:43px;
+       line-height:110px;
+       background-color: gainsboro;
+       border:1px solid black;
+       text-align: center;
+       font:normal normal 35px "黑体";
+       color: darkorange;
+       position: absolute;
+       left: 5%;
+       top: 1205px;
+     }
+    .receipt{
+      width:80%;
+      height:70px;
+      line-height:100px;
+      background-color:rgba(255,127,36,1);
+      color:white;
+      border:1.5px solid #7CCD7C;
+      text-align:center;
+      font:normal normal 50px "微软雅黑";
+      position: absolute;
+      left: 10%;
+      top: 1650px;
+    }
+    .all{
+      width:500px;
+      height:70px;
+      line-height:90px;
+      color:#838B83;
+      background-color:white;
+      border:1.5px solid gray;
+      text-align: -webkit-right ;
+      font:normal normal 40px "微软雅黑";
+      position: absolute;
+      left: 40%;
+      top: 865px;
+    }
+    .al2{
+      width:500px;
+      height:70px;
+      line-height:90px;
+      color:#838B83;
+      background-color:white;
+      border:1.5px solid gray;
+      text-align: -webkit-right ;
+      font:normal normal 40px "微软雅黑";
+      position: absolute;
+      left: 40%;
+      top: 985px;
+    }
+    .al3{
+      width:500px;
+      height:70px;
+      line-height:90px;
+      color:#838B83;
+      background-color:white;
+      border:1.5px solid gray;
+      text-align: -webkit-right ;
+      font:normal normal 40px "微软雅黑";
+      position: absolute;
+      left: 40%;
+      top: 1100px;
+    }
+    .al4{
+      width:500px;
+      height:70px;
+      line-height:90px;
+      color:#838B83;
+      background-color:white;
+      border:1.5px solid gray;
+      text-align: -webkit-right ;
+      font:normal normal 40px "微软雅黑";
+      position: absolute;
+      left: 40%;
+      top: 1285px;
+    }
+    .al5{
+      width:500px;
+      height:70px;
+      line-height:90px;
+      color:#838B83;
+      background-color:white;
+      border:1.5px solid gray;
+      text-align: -webkit-right ;
+      font:normal normal 40px "微软雅黑";
+      position: absolute;
+      left: 40%;
+      top: 1405px;
+    }
+    .al6{
+      width:500px;
+      height:70px;
+      line-height:90px;
+      color:#838B83;
+      background-color:white;
+      border:1.5px solid gray;
+      text-align: -webkit-right ;
+      font:normal normal 40px "微软雅黑";
+      position: absolute;
+      left: 40%;
+      top: 1525px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="a"><strong>Pick me</strong></div>
+<button class="back" type="button"><</button>
+<div class="b">车&nbsp;&nbsp;主&nbsp;&nbsp;认&nbsp;&nbsp;证</div>
+<p class="photo"><strong>身份证人面像</strong></p>
+<p class="photo1"><strong>学生证人面像</strong></p>
+<div class="c"><strong>证件图上传</strong></div>
+<div class="d"><strong>!以下信息为系统自动识别，如不正确请修改</strong></div>
+<div class="d1"><strong>!以下信息摩托车车主填写</strong></div>
+<img src="../img/photo/相机.jpg"  width="100" style="position: absolute; left:65% ;top:400px;"/>
+<img src="../img/photo/相机.jpg"  width="100" style="position: absolute; left:65% ;top:575px;"/>
+<img src="../img/photo/灰.png" height="450" width="880"style="position: absolute; left:52px ;top:305px;"/>
+<div>
+  <form action="">
+    <p class="photo2">本人姓名：</p>
+    <p class="photo3">身份证号：</p>
+    <p class="photo4">电话：</p>
+    <p class="photo5">驾驶证初次领证日期：</p>
+    <p class="photo6">驾驶证有效期：</p>
+    <p class="photo7">摩托车车型：</p>
+    <input class="all" type="text" name="distance1" value="请输入你的名字">
+    <input class="al2" type="text" name="distance2" value="请输入您的身份证号">
+    <input class="al3" type="text" name="distance3" value="请输入您的电话">
+    <input class="al4" type="text" name="distance4" value=" ">
+    <input class="al5" type="text" name="distance5" value=" ">
+    <input class="al6" type="text" name="distance6" value=" ">
+    <input class="receipt" type="submit" value="完&nbsp;成&nbsp;认&nbsp;证">
+    <img src="../img/photo/hhhhs.png" height="400" width="975"style="position: absolute; left:-4px ;top:810px;"/>
+    <img src="../img/photo/hhhhs.png" height="400" width="975"style="position: absolute; left:-4px ;top:1240px;"/>
+</div>
+</body>
+</html>

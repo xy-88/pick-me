@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+
+  <!-- <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script> -->
+  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=wqBXfIN3HkpM1AHKWujjCdsi"></script>
+  <script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .a{
+      width:100%;
+      height:120px;
+      line-height:120px;
+      background-color:rgba(193,205,193,0.3);
+      border:1.5px solid #CDC9C9;
+      text-align:center;
+      font:normal normal 65px "Comic Sans MS";
+    }
+    .b{
+      width:88%;
+      height:100px;
+      line-height:110px;
+      background-color:white;
+      text-align:center;
+      color: red;
+      font:normal normal 60px "微软雅黑";
+    }
+    .back{
+      width:15%;
+      height:100px;
+      line-height:110px;
+      background-color:white;
+      border:1px solid white;
+      text-align:center;
+      font:normal bold 80px "幼圆";
+      float:left;
+    }
+    .c{
+      width:75%;
+      height:55px;
+      line-height:110px;
+      color:rgba(0,0,0,0.7);
+      background-color:aliceblue;
+      text-align:left;
+      font:normal normal 35px "微软雅黑";
+      float:left;
+    }
+    .c1{
+      width:30%;
+      height:150px;
+      line-height:110px;
+      color:rgba(0,0,0,0.7);
+      background-color:white;
+      text-align:left;
+      font:normal normal 55px "微软雅黑";
+      float:left;
+    }
+    .c2{
+      width:45%;
+      height:27px;
+      line-height:110px;
+      color:rgba(0,0,0,0.7);
+      background-color:white;
+      text-align:left;
+      font:normal normal 35px "微软雅黑";
+      position: absolute;
+      left: 30%;
+      top: 222px;
+    }
+    .c5{
+      width:45%;
+      height:28px;
+      line-height:110px;
+      color:rgba(0,0,0,0.7);
+      background-color:white;
+      text-align:left;
+      font:normal normal 35px "微软雅黑";
+      position: absolute;
+      left: 30%;
+      top: 285px;
+    }
+
+    .c4{
+      width:75%;
+      height:95px;
+      line-height:110px;
+      color:rgba(0,0,0,0.7);
+      background-color: aliceblue;
+      text-align:center;
+      color: red;
+      font:normal normal 55px "微软雅黑";
+      float:left;
+    }
+    .all{
+      width:25%;
+      height:300px;
+      line-height:110px;
+      color:#838B83;
+      background-color:white;
+      border:1.5px solid #7CCD7C;
+      text-align:center;
+      font:normal normal 50px "微软雅黑";
+      position: absolute;
+      left: 75%;
+      top: 222px;
+    }
+    .call{
+      width:100%;
+      height:120px;
+      line-height:120px;
+      background-color:rgba(255,127,36,1);
+      color:white;
+      border:1.5px solid #7CCD7C;
+      text-align:center;
+      font:normal normal 60px "微软雅黑";
+      float:left;
+      border-radius:10px;
+    }
+    #container{
+      width:100%;
+      height: 1223px;
+    }
+    .clear{
+      clear:both;
+    }
+  </style>
+</head>
+
+<body>
+<div class="a">pick me</div>
+<button class="back" type="button"><</button>
+<div class="b">订单进行中</div>
+<form action="">
+  <div class="c1">乘客ID </div>
+  <div class="c2">乘客上车点 </div>
+  <div class="c5">乘客目的地</div>
+  <div class="all">头像 </div>
+  <div class="c">预估价格 </div>
+  <div class="c4">价格 </div>
+
+  <div class="clear"></div>
+  <div id="container"></div>
+  <img src="../img/photo/payS.png" height="99" width="688" style="position: fixed;z-index: 2;left: 15%;top: 1000px"/>
+  <script type="text/javascript" style="position: relative;z-index: 1">
+      // 创建地图实例，避免与Map重名，所以使用BMap.Map
+      var map = new BMap.Map("container");
+      // 创建点坐标
+      var point = new BMap.Point(113.946317, 22.549008);
+      // 初始化地图，设置中心点坐标和地图级别 1~18级
+      map.centerAndZoom(point, 18);
+      //鼠标滚动，地图缩放
+      map.enableScrollWheelZoom(true);
+      //添加地图控件
+      map.addControl(new BMap.NavigationControl());               // 添加平移缩放控件
+      map.addControl(new BMap.ScaleControl());                    // 添加比例尺控件
+      map.addControl(new BMap.OverviewMapControl());              //添加缩略地图控件
+      map.enableScrollWheelZoom();                            //启用滚轮放大缩小
+      map.addControl(new BMap.MapTypeControl());          //添加地图类型控件
+      map.setCurrentCity("福州");          // 设置地图显示的城市 此项是必须设置的
+      //添加地图标注
+      var marker = map.addOverlay(new BMap.Marker(point));
+  </script>
+</body>
+</html>
+
