@@ -12,6 +12,15 @@
 		      margin: 0;
 		      padding: 0;
 		    }
+		    .a{
+		      width:100%;
+		      height:120px;
+		      line-height:120px;
+		      background-color:rgba(193,205,193,0.3);
+		      border:1.5px solid 	#CDC9C9;
+		      text-align:center;
+		      font:normal normal 65px "Yu Gothic UI Semibold";
+		    }
 		    .b{
 		    	width:88%;
 		    	height:110px;
@@ -30,40 +39,14 @@
 		    	font:normal bold 80px "幼圆";
 		    	float:left;
 		    	}
-			.c{
-			  text-align: center;
-			  font:normal normal 35px "微软雅黑";
-			  color: rgba(255,127,36,1);
-			  position: absolute;
-			  left: 5%;
-			  top: 150px;
-			}
-			
-			.photo{
-			  text-align: center;
-			  font:normal normal 45px "微软雅黑";
-			  color: black;
-			  position: absolute;
-			  left: 17%;
-			  top: 290px;
-			}
-			.ph1{
-				
-				width: 300px;
-				height: 160px;
-				display: block;
-				position: absolute;
-				left: 11%;
-				top: 14%;
-			}
-			
+		
 		    .photo2{
 		      text-align: center;
 		      font:normal normal 50px "微软雅黑";
 		      color: black;
 		      position: absolute;
 		      left: 7%;
-		      top: 530px;
+		      top: 280px;
 		    }
 		
 		    .photo3{
@@ -72,7 +55,7 @@
 		      color: black;
 		      position: absolute;
 		      left: 7%;
-		      top: 650px;
+		      top: 400px;
 		    }
 		    .photo4{
 		      text-align: center;
@@ -80,7 +63,15 @@
 		      color: black;
 		      position: absolute;
 		      left: 7%;
-		      top: 770px;
+		      top: 520px;
+		    }
+		    .photo5{
+		      text-align: center;
+		      font:normal normal 50px "微软雅黑";
+		      color: black;
+		      position: absolute;
+		      left: 7%;
+		      top: 640px;
 		    }
 		    .d{
 		      width:40%;
@@ -90,8 +81,8 @@
 		      font:normal normal 37px "微软雅黑";
 		      color: rgba(255,127,36,1);
 		      position: absolute;
-		      left: 2%;
-		      top: 450px;
+		      left: 5%;
+		      top: 180px;
 		    }
 		    .receipt{
 		      width:80%;
@@ -104,7 +95,7 @@
 		      font:normal normal 60px "微软雅黑";
 		      position: absolute;
 		      left: 10%;
-		      top: 900px;
+		      top: 800px;
 		    }
 		    .all{
 		      width:550px;
@@ -118,7 +109,7 @@
 			  border-radius: 6px;
 		      position: absolute;
 		      left: 35%;
-		      top: 530px;
+		      top: 270px;
 		    }
 		    .al2{
 		      width:550px;
@@ -132,7 +123,7 @@
 			  border-radius: 6px;
 		      position: absolute;
 		      left: 35%;
-		      top: 650px;
+		      top: 390px;
 		    }
 		    .al3{
 		      width:550px;
@@ -146,7 +137,7 @@
 			  border-radius: 6px;
 		      position: absolute;
 		      left: 35%;
-		      top:770px;
+		      top: 510px;
 		    }
 		    .al4{
 		      width:550px;
@@ -161,20 +152,6 @@
 		      position: absolute;
 		      left: 35%;
 		      top: 630px;
-		    }
-		    .al5{
-		      width:550px;
-		      height:70px;
-		      line-height:90px;
-		      color:#838B83;
-		      background-color:white;
-		      border:1.5px solid gray;
-		      text-align: -webkit-right ;
-		      font:normal normal 45px "微软雅黑";
-			  border-radius: 6px;
-		      position: absolute;
-		      left: 35%;
-		      top: 750px;
 		    }
 			.tips{
 			  width:90%;
@@ -192,7 +169,7 @@
 			  border-radius: 6px;
 			  position: absolute;
 			  left: 5%;
-			  top: 1090px;
+			  top: 1040px;
 			}
 			.loading{
 				width:100%;
@@ -214,85 +191,41 @@
 		</div>
 		
 		<button class="back" type="button" onclick="back()"><</button> 
-		<div class="b">车&nbsp;主&nbsp;认&nbsp;证</div>
+		<div class="b">信&nbsp;息&nbsp;修&nbsp;改</div>
 		<hr />
-				<div class="photo">
-					车辆图片
-				</div>
-				<img src="img/beijing2.png" class="ph1">
-				
-				<div class="c"><strong>车辆图片上传</strong></div>
-				<input type="file" accept="image/*" id="imagehead" value="" class="upload1" style="width: 13%; height: 7%; position:absolute; left:65% ;top:14%;display: none;"/>
-				<img src="./img/photo/camera.jpg" width="15%" style="position: absolute; left:65% ;top:14%;" id="camera1"/>
-				
 				<div class="d"><strong>!请认真填写以下信息</strong></div>
 				<div>
+					
 						<p class="photo2">本人姓名：</p>
 						<p class="photo3">车型：</p>
 						<p class="photo4">车牌号：</p>
+						<p class="photo5">电话：</p>
 						<input class="all" type="text" name="distance1" placeholder="请输入你的名字" id="mz">
 						<input class="al2" type="text" name="distance4" placeholder="请输入您的车辆车型" id="cx">
 						<input class="al3" type="text" name="distance5" placeholder="请输入您的车牌号" id="cp">
-						<button class="receipt" value="完&nbsp;成&nbsp;认&nbsp;证" id="rz">点&nbsp;击&nbsp;认&nbsp;证</button>
+						<input class="al4" type="text" name="distance7" placeholder="请输入您的电话" id="tn">
+						<button class="receipt" value="完&nbsp;成&nbsp;认&nbsp;证" id="rz">确&nbsp;认&nbsp;修&nbsp;改</button>
 						<div class="tips">
 							<br />
-							<h3>认证须知:</h3>
+							<h3>修改须知:</h3>
 							<br />
-							★本人姓名必须与学生认证时填写的信息一致才可认证成功
-							<br />
+							★本人姓名必须与学生认证时填写的信息一致才可修改成功
+							<br /><br />
+							★只允许修改车型、车牌号和电话
+							<br /><br />
 							★姓名、性别、生日、身份证等唯一信息一旦认证成功，不允许修改，若因某种特殊原因产生变动，可以注销此账号重新注册
-							<br />
-							★若后续车型、车牌号、手机号码产生变更，可进入账户信息中点击“修改”进行修改
 							<br />
 						</div>
 				</div>
 				<script src="https://code.jquery.com/jquery-latest.js"></script>
 				<script>
-					function back(){
-						window.location.href='homepage.html';
-					}
-					function hp(){
-						window.location.href='homepage.html';
-					}
-					
 					username = localStorage.username
-					$(document).ready(function(){
-					    $('#camera1').click(function(){
-					        $('#imagehead').click();
-					    });
-					
-					});
-					$(document).ready(function(){
-					    $('#camera2').click(function(){
-					        $('#imagehead2').click();
-					    });
-					
-					});
-					$(".upload1").on("change",function(){
-					    var objUrl = getObjectURL(this.files[0]);
-						console.log(objUrl)
-					    if(objUrl){
-					        $(".ph1").show().attr("src",objUrl);
-					        //$(".picture span").hide();
-					    }
-					})
-					$(".upload2").on("change",function(){
-					    var objUrl = getObjectURL(this.files[0]);
-						console.log(objUrl)
-					    if(objUrl){
-					        $(".ph2").show().attr("src",objUrl);
-					        //$(".picture span").hide();
-					    }
-					})
 					$(function(){   //get请求
 					    $('#rz').on('click',function(){
 							var $user = username
 					        var $name=$('#mz').val();
-							// var $sex= $('#xb').val();
-							var $carid = $('#sfz').val();
 							var $cycletype = $('#cx').val();
 							var $cycleinfo = $('#cp').val();
-							// var $birth = $('#sr').val();
 							var $tel = $('#tn').val();
 							if ($name.match(/[^\p{Unified_Ideograph}]/u)) {
 								alert("姓名要填中文名哦");
@@ -300,8 +233,6 @@
 								alert("姓名不能为空");
 							} else if ($name.length > 4) {
 								alert("名字太长了");
-							} else if ($carid.length != 18 || $carid.match(/[^\0-\9]/)) {
-								alert("身份证有误");
 							} else if ($tel.length != 11 || $tel.match(/[^\0-\9]/)) {
 								alert("手机号有误");
 							} else {
@@ -310,15 +241,12 @@
 									$(".loading").show();
 								},
 					            type: 'POST',
-					            url: 'http://192.168.191.1/driver/valid',				
+					            url: 'http://192.168.191.1/driver/revise',				
 								data:{
 									user:$user,
 									name: $name,
-									// sex: $sex,
 									cycletype: $cycletype,
 									cycleinfo: $cycleinfo,
-									idnum: $carid,
-									// birth: ' ',
 									tel: $tel
 									
 								},
@@ -326,7 +254,6 @@
 									$(".loading").hide();
 					                var reslutData=data;
 					                console.log(reslutData);
-					                //$('#reslut1').text(data["msg"]);
 									data=JSON.parse(data);
 									if (data["status"] >= 0){
 										console.log('登录成功');
@@ -334,10 +261,10 @@
 										localStorage.username = $user;
 										localStorage.nowsf = 1;
 										localStorage.isdv = 1;
+										alert("修改成功");
 										hp();
 									}else{
 										console.log('fail rz')
-										//alert(data["msg"])//结果展示如下图
 									}
 					            }             
 								})
@@ -345,6 +272,12 @@
 					        
 					    })       
 					})
+					function back(){
+						window.location.href='homepage.html';
+					}
+					function hp(){
+						window.location.href='homepage.html';
+					}
 				</script>
 	</body>
 </html>

@@ -1,213 +1,461 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8" />
+	<head>
+		<meta charset="UTF-8" />
+		<title>Pick me</title>
+		<style>
+		    * {
+		      margin: 0;
+		      padding: 0;
+		    }
+		    .a{
+		      width:100%;
+		      height:120px;
+		      line-height:120px;
+		      background-color:rgba(193,205,193,0.3);
+		      border:1.5px solid 	#CDC9C9;
+		      text-align:center;
+		      font:normal normal 65px "Yu Gothic UI Semibold";
+		    }
+		    .b{
+		    	width:88%;
+		    	height:110px;
+		    	line-height:110px;
+		    	background-color:white;
+		    	text-align:center;
+		    	font:normal normal 65px "微软雅黑";
+		    }
+		    .back{
+		    	width:15%;
+		    	height:110px;
+		    	line-height:110px;
+		    	background-color:white;
+		    	border:1px solid white;
+		    	text-align:center;
+		    	font:normal bold 80px "幼圆";
+		    	float:left;
+		    	}
+		    .c{
+		      text-align: center;
+		      font:normal normal 35px "微软雅黑";
+		      color: rgba(255,127,36,1);
+		      position: absolute;
+		      left: 5%;
+		      top: 150px;
+		    }
+		
+		    .photo{
+		      text-align: center;
+		      font:normal normal 45px "微软雅黑";
+		      color: black;
+		      position: absolute;
+		      left: 13%;
+		      top: 300px;
+		    }
+		
+		    .photo1{
+		      text-align: center;
+		      font:normal normal 45px "微软雅黑";
+		      color: black;
+		      position: absolute;
+		      left: 13%;
+		      top: 500px;
+		    }
+		
+		    .photo2{
+		      text-align: center;
+		      font:normal normal 50px "微软雅黑";
+		      color: black;
+		      position: absolute;
+		      left: 7%;
+		      top: 780px;
+		    }
+		
+		    .photo3{
+		      text-align: center;
+		      font:normal normal 50px "微软雅黑";
+		      color: black;
+		      position: absolute;
+		      left: 7%;
+		      top: 900px;
+		    }
+		    .photo4{
+		      text-align: center;
+		      font:normal normal 50px "微软雅黑";
+		      color: black;
+		      position: absolute;
+		      left: 7%;
+		      top: 1020px;
+		    }
+		    .photo5{
+		      text-align: center;
+		      font:normal normal 50px "微软雅黑";
+		      color: black;
+		      position: absolute;
+		      left: 7%;
+		      top: 1140px;
+		    }
+			.photo6{
+			  text-align: center;
+			  font:normal normal 50px "微软雅黑";
+			  color: black;
+			  position: absolute;
+			  left: 7%;
+			  top: 1260px;
+			}
+			.photo7{
+			  text-align: center;
+			  font:normal normal 50px "微软雅黑";
+			  color: black;
+			  position: absolute;
+			  left: 7%;
+			  top: 1380px;
+			}
+			.photo8{
+			  text-align: center;
+			  font:normal normal 50px "微软雅黑";
+			  color: black;
+			  position: absolute;
+			  left: 7%;
+			  top: 1500px;
+			}
+		    .d{
+		      width:40%;
+		      height:43px;
+		      line-height:110px;
+		      text-align: center;
+		      font:normal normal 37px "微软雅黑";
+		      color: rgba(255,127,36,1);
+		      position: absolute;
+		      left: 2%;
+		      top: 680px;
+		    }
+		    .receipt{
+		      width:80%;
+		      height:90px;
+		      line-height:100px;
+		      background-color:rgba(255,127,36,1);
+		      color:white;
+		      border-radius:16px;
+		      text-align:center;
+		      font:normal normal 60px "微软雅黑";
+		      position: absolute;
+		      left: 10%;
+		      top: 1600px;
+		    }
+		    .all{
+		      width:550px;
+		      height:70px;
+		      line-height:90px;
+		      color:#838B83;
+		      background-color:white;
+		      border:1.5px solid gray;
+		      text-align: -webkit-right ;
+		      font:normal normal 45px "微软雅黑";
+			  border-radius: 6px;
+		      position: absolute;
+		      left: 35%;
+		      top: 770px;
+		    }
+		    .al2{
+		      width:550px;
+		      height:70px;
+		      line-height:90px;
+		      color:#838B83;
+		      background-color:white;
+		      border:1.5px solid gray;
+		      text-align: -webkit-right ;
+		      font:normal normal 45px "微软雅黑";
+			  border-radius: 6px;
+		      position: absolute;
+		      left: 35%;
+		      top: 890px;
+		    }
+		    .al3{
+		      width:550px;
+		      height:70px;
+		      line-height:90px;
+		      color:#838B83;
+		      background-color:white;
+		      border:1.5px solid gray;
+		      text-align: -webkit-right ;
+		      font:normal normal 45px "微软雅黑";
+			  border-radius: 6px;
+		      position: absolute;
+		      left: 35%;
+		      top: 1010px;
+		    }
+		    .al4{
+		      width:550px;
+		      height:70px;
+		      line-height:90px;
+		      color:#838B83;
+		      background-color:white;
+		      border:1.5px solid gray;
+		      text-align: -webkit-right ;
+		      font:normal normal 45px "微软雅黑";
+			  border-radius: 6px;
+		      position: absolute;
+		      left: 35%;
+		      top: 1130px;
+		    }
+		    .al5{
+		      width:550px;
+		      height:70px;
+		      line-height:90px;
+		      color:#838B83;
+		      background-color:white;
+		      border:1.5px solid gray;
+		      text-align: -webkit-right ;
+		      font:normal normal 45px "微软雅黑";
+			  border-radius: 6px;
+		      position: absolute;
+		      left: 35%;
+		      top: 1250px;
+		    }
+		    .al6{
+		      width:550px;
+		      height:70px;
+		      line-height:90px;
+		      color:#838B83;
+		      background-color:white;
+		      border:1.5px solid gray;
+		      text-align: -webkit-right ;
+		      font:normal normal 45px "微软雅黑";
+			  border-radius: 6px;
+		      position: absolute;
+		      left: 35%;
+		      top: 1370px;
+		    }
+			.al7{
+			  width:550px;
+			  height:70px;
+			  line-height:90px;
+			  color:#838B83;
+			  background-color:white;
+			  border:1.5px solid gray;
+			  text-align: -webkit-right ;
+			  font:normal normal 45px "微软雅黑";
+			  border-radius: 6px;
+			  position: absolute;
+			  left: 35%;
+			  top: 1490px;
+			}
+			.ph1{
+				
+				width: 300px;
+				height: 160px;
+				display: block;
+				position: absolute;
+				left: 11%;
+				top: 14%;
+			}
+			.ph2{
+				
+				width: 300px;
+				height: 160px;
+				
+				position: absolute;
+				left: 11%;
+				top: 26%;
+			}
+			a{
+			background: #13A3A5;
+			padding:5px;
+			margin:10px;
+			display:block;
+			font-weight:100;
+			cursor:pointer;
+			font-size:1.5em;
+			float:left;
+			text-decoration:none;
+			font-size:18px;
+			color:white
+			}
+			.loading{
+				width:100%;
+				height:100%;
+				display: none;
+				position:fixed;
+				z-index:999
+			}
+		  </style>
+	</head>
 
-  <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
-  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=wqBXfIN3HkpM1AHKWujjCdsi"></script>
-  <script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-    }
-    .a{
-      width:100%;
-      height:120px;
-      line-height:120px;
-      background-color:rgba(193,205,193,0.3);
-      border:1.5px solid 	#CDC9C9;
-      text-align:center;
-      font:normal normal 65px "Yu Gothic UI Semibold";
-    }
-    .b{
-      width:100%;
-      height:100px;
-      line-height:110px;
-      border:1.5px solid 	#CDC9C9;
-      text-align: center;
-      font:normal normal 65px "微软雅黑";
-      position: absolute;
-      left: 0%;
-      top: 122px;
-    }
-    .back{
-      width:15%;
-      height:100px;
-      line-height:110px;
-      background-color:white;
-      border:1px solid white;
-      text-align:center;
-      font:normal bold 80px "黑体";
-      float:left;
-    }
-    .c{
-      text-align: center;
-      font:normal normal 35px "黑体";
-      color: darkorange;
-      position: absolute;
-      left: 5%;
-      top: 300px;
-    }
-
-    .photo{
-      text-align: center;
-      font:normal normal 40px "黑体";
-      color: black;
-      position: absolute;
-      left: 15%;
-      top: 475px;
-    }
-
-    .photo1{
-      text-align: center;
-      font:normal normal 40px "黑体";
-      color: black;
-      position: absolute;
-      left: 15%;
-      top: 690px;
-    }
-
-    .photo2{
-      text-align: center;
-      font:normal normal 40px "黑体";
-      color: black;
-      position: absolute;
-      left: 7%;
-      top: 1025px;
-    }
-
-    .photo3{
-      text-align: center;
-      font:normal normal 40px "黑体";
-      color: black;
-      position: absolute;
-      left: 7%;
-      top: 1150px;
-    }
-    .photo4{
-      text-align: center;
-      font:normal normal 40px "黑体";
-      color: black;
-      position: absolute;
-      left: 7%;
-      top: 1335px;
-    }
-    .photo5{
-      text-align: center;
-      font:normal normal 40px "黑体";
-      color: black;
-      position: absolute;
-      left: 7%;
-      top: 1460px;
-    }
-    .d{
-      width:75%;
-      height:43px;
-      line-height:110px;
-      background-color: gainsboro;
-      border:1px solid black;
-      text-align: center;
-      font:normal normal 35px "黑体";
-      color: darkorange;
-      position: absolute;
-      left: 5%;
-      top: 900px;
-    }
-    .receipt{
-      width:80%;
-      height:80px;
-      line-height:100px;
-      background-color:rgba(255,127,36,1);
-      color:white;
-      border:1.5px solid #7CCD7C;
-      text-align:center;
-      font:normal normal 50px "微软雅黑";
-      position: absolute;
-      left: 10%;
-      top: 1600px;
-    }
-    .all{
-      width:500px;
-      height:70px;
-      line-height:90px;
-      color:#838B83;
-      background-color:white;
-      border:1.5px solid gray;
-      text-align: -webkit-right ;
-      font:normal normal 40px "微软雅黑";
-      position: absolute;
-      left: 40%;
-      top: 1010px;
-    }
-    .al2{
-      width:500px;
-      height:70px;
-      line-height:90px;
-      color:#838B83;
-      background-color:white;
-      border:1.5px solid gray;
-      text-align: -webkit-right ;
-      font:normal normal 40px "微软雅黑";
-      position: absolute;
-      left: 40%;
-      top: 1140px;
-    }
-    .al3{
-      width:500px;
-      height:70px;
-      line-height:90px;
-      color:#838B83;
-      background-color:white;
-      border:1.5px solid gray;
-      text-align: -webkit-right ;
-      font:normal normal 40px "微软雅黑";
-      position: absolute;
-      left: 40%;
-      top: 1320px;
-    }
-    .al4{
-      width:500px;
-      height:70px;
-      line-height:90px;
-      color:#838B83;
-      background-color:white;
-      border:1.5px solid gray;
-      text-align: -webkit-right ;
-      font:normal normal 40px "微软雅黑";
-      position: absolute;
-      left: 40%;
-      top: 1450px;
-    }
-
-  </style>
-</head>
-
-<body>
-
-  <div class="a"><strong>Pick me</strong></div>
-  <button class="back" type="button"><</button>
-  <div class="b">学&nbsp;&nbsp;生&nbsp;&nbsp;认&nbsp;&nbsp;证</div>
-  <p class="photo"><strong>身份证人面像</strong></p>
-  <p class="photo1"><strong>学生证人面像</strong></p>
-  <div class="c"><strong>证件图上传</strong></div>
-  <div class="d"><strong>!以下信息为系统自动识别，如不正确请修改</strong></div>
-  <img src="./img/photo/相机.jpg"  width="100" style="position: absolute; left:65% ;top:450px;"/>
-  <img src="./img/photo/相机.jpg"  width="100" style="position: absolute; left:65% ;top:675px;"/>
-  <img src="./img/photo/灰.png" height="500" width="880"style="position: absolute; left:52px ;top:365px;"/>
-  <div>
-  <form action="">
-    <p class="photo2">本人姓名：</p>
-    <p class="photo3">身份证号：</p>
-    <p class="photo4">电话：</p>
-    <p class="photo5">就读大学：</p>
-    <input class="all" type="text" name="distance3" value="请输入你的名字">
-    <input class="al2" type="text" name="distance3" value="请输入您的身份证号">
-    <input class="al3" type="text" name="distance3" value="请输入您的电话">
-    <input class="al4" type="text" name="distance3" value="请输入您的大学">
-    <input class="receipt" type="submit" value="完&nbsp;成&nbsp;认&nbsp;证">
-    <img src="./img/photo/hhhhs.png" height="675" width="975"style="position: absolute; left:-4px ;top:920px;"/>
-  </div>
-</body>
+	<body>
+		<div class="loading">
+			<div style="text-align:center;clear:both">
+			<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+			<script src="/follow.js" type="text/javascript"></script>
+			</div>
+			      <iframe frameborder="0" scrolling="no" src="index2.html" width="100%" height="100%"></iframe>
+		</div>
+		<!--<div class="a"><strong>Pick me</strong></div>-->
+		<button class="back" type="button" onclick="back()"><</button> 
+		<div class="b">学&nbsp;生&nbsp;认&nbsp;证</div>
+		<hr />
+				<div class="photo">
+					身份证人面像
+				</div>
+				<img src="img/beijing2.png" class="ph1">
+				<div class="photo1">
+					学生证人面像
+				</div>
+				<img src="img/beijing2.png" class="ph2">
+				
+				<div class="c"><strong>证件图上传</strong></div>
+				<div class="d"><strong>!请认真填写以下信息</strong></div>
+				<input type="file" accept="image/*" id="imagehead" value="" class="upload1" style="width: 13%; height: 7%; position:absolute; left:65% ;top:14%;display: none;"/>
+				<img src="./img/photo/camera.jpg" width="15%" style="position: absolute; left:65% ;top:14%;" id="camera1"/>
+				<input type="file" accept="image/*" id="imagehead2" value="" class="upload2" style="width: 10%; height: 7%; position:absolute; left:65% ;top:27%;display: none;"/>
+				<img src="./img/photo/camera.jpg" width="15%" style="position: absolute; left:65% ;top:27%;" id="camera2"/>
+				
+				<div>
+						<p class="photo2">本人姓名：</p>
+						<p class="photo3">性别：</p>
+						<p class="photo4">身份证号：</p>
+						<p class="photo5">学号：</p>
+						<p class="photo6">出生年月：</p>
+						<p class="photo7">电话：</p>
+						<p class="photo8">就读大学：</p>
+						<input class="all" type="text" name="distance3" placeholder="请输入你的名字" id="mz">
+						<input class="al2" type="text" name="distance3" placeholder="男/女" id="xb">
+						<input class="al3" type="text" name="distance3" placeholder="请输入您的身份证号" id="sfz">
+						<input class="al4" type="text" name="distance3" placeholder="请输入您的学号" id="xh">
+						<input class="al5" type="date" name="distance3" placeholder="请输入您的出生年月" id="sr">
+						<input class="al6" type="text" name="distance3" placeholder="请输入您的电话" id="tn">
+						<input class="al7" type="text" name="distance3" value="福州大学" id="xq">
+						<button class="receipt" id="srz">完&nbsp;成&nbsp;认&nbsp;证</button>					
+				</div>
+				<script src="https://code.jquery.com/jquery-latest.js"></script>
+				<script>
+					var username = localStorage.username
+					console.log(username)
+					$(document).ready(function(){
+					    $('#camera1').click(function(){
+					        $('#imagehead').click();
+					    });
+					
+					});
+					$(document).ready(function(){
+					    $('#camera2').click(function(){
+					        $('#imagehead2').click();
+					    });
+					
+					});
+					$(".upload1").on("change",function(){
+					    var objUrl = getObjectURL(this.files[0]);
+						console.log(objUrl)
+					    if(objUrl){
+					        $(".ph1").show().attr("src",objUrl);
+					        //$(".picture span").hide();
+					    }
+					})
+					$(".upload2").on("change",function(){
+					    var objUrl = getObjectURL(this.files[0]);
+						console.log(objUrl)
+					    if(objUrl){
+					        $(".ph2").show().attr("src",objUrl);
+					        //$(".picture span").hide();
+					    }
+					})
+					$(function(){   //post请求
+						$('#srz').on('click',function(){
+							var $user = username
+							var $name=$('#mz').val();
+							var $sex= $('#xb').val();
+							var $idnum = $('#sfz').val();
+							var $scard = $('#xh').val();
+							var $birth = $('#sr').val();
+							var $tel = $('#tn').val();
+							var xx = $('#xq').val()
+							//console.log(user)
+							var files = $('#imagehead').prop('files');
+							var files1 = $('#imagehead2').prop('files');
+							console.log(files1[0]);
+							var fd = new FormData();
+							fd.append("user",$user);
+							fd.append("name",$name);
+							fd.append("sex",$sex);
+							fd.append("idnum",$idnum);
+							fd.append("scard",$scard);
+							fd.append("birth",$birth);
+							fd.append("tel",$tel);
+							fd.append("idcard",files[0]);
+							fd.append("stcard",files1[0]);
+							console.log(fd);
+							
+							if ($name.match(/[^\p{Unified_Ideograph}]/u)) {
+								alert("姓名要填中文名哦");
+							} else if ($name == "") {
+								alert("姓名不能为空");
+							} else if ($name.length > 4) {
+								alert("名字太长了");
+							} else if ($idnum.length != 18 || $idnum.match(/[^\0-\9]/)) {
+								alert("身份证有误");
+							} else if ($tel.length != 11 || $tel.match(/[^\0-\9]/)) {
+								alert("手机号有误");
+							} else if (xx != "福州大学") {
+								alert("您的学校暂时不在运营范围");
+							} else {
+								$.ajax({
+								beforeSend: function(){
+									$(".loading").show();
+								},
+								type: 'POST',
+								url: 'http://192.168.191.1/valid',
+								data:fd,
+								processData:false,
+								contentType: false,
+								mimeType: "multipart/form-data",
+								success: function(data){
+									$(".loading").hide();
+									var reslutData=data;										
+									console.log(reslutData);
+									data=JSON.parse(data);
+									console.log(data["status"]);
+									if (data["status"] == 1){
+										console.log("认证成功");
+										passrz();
+									}else{
+										console.log(data["msg"]);
+									}
+									},
+								error:function(XMLHttpRequest, textStatus, errorThrown){
+									$(".loading").hide();
+									console.log(XMLHttpRequest.status);
+									// 状态
+									console.log(XMLHttpRequest.readyState);
+									// 错误信息   
+									console.log(textStatus);
+									alert("error:"+XMLHttpRequest.status);
+								}
+											 
+								})
+							}
+							
+						})
+							
+						})   
+					function getObjectURL(file) {
+					    var url = null ;
+					    if (window.createObjectURL!=undefined) { // basic
+					    url = window.createObjectURL(file) ;
+					    } else if (window.URL!=undefined) { // mozilla(firefox)
+					    url = window.URL.createObjectURL(file) ;
+					    } else if (window.webkitURL!=undefined) { // webkit or chrome
+					    url = window.webkitURL.createObjectURL(file) ;
+					    }
+					    return url ;
+					}
+					function passrz(){
+						
+						window.location.href='homepage.html';
+					}
+					function back(){
+						
+						window.location.href='login.html';
+					}
+				</script>
+	</body>
 </html>

@@ -1,0 +1,273 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Pick me</title>
+		<script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=wqBXfIN3HkpM1AHKWujjCdsi"></script>
+		<script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
+
+		<style>
+					* {
+				  margin: 0;
+				  padding: 0;
+				}
+				.b{
+					width:88%;
+					height:110px;
+					line-height:110px;
+					background-color:white;
+					text-align:center;
+					font:normal normal 65px "微软雅黑";
+				}
+				.back{
+					width:15%;
+					height:110px;
+					line-height:110px;
+					background-color:white;
+					border:1px solid white;
+					text-align:center;
+					font:normal bold 80px "幼圆";
+					float:left;
+					}
+				.c{
+					width:200px;
+					height:90px;
+					line-height:90px;
+					background-color:white;
+								font:normal normal 50px "微软雅黑";
+					text-align:center;			
+					display: flex;			    /*实现垂直居中*/			    
+					align-items: center;			    /*实现水平居中*/			    
+					justify-content: center;			    			    
+					text-align: justify;
+					position:absolute;			left:60px;			
+				}		
+				.all{
+					width:630px;
+					height:90px;
+					line-height:90px;
+					color:#838B83;
+					background-color:white;
+					border:2px solid 	#CDC9C9;
+					font:normal normal 45px "微软雅黑";			
+					border-radius: 15px;
+					display: flex;			    /*实现垂直居中*/
+					align-items: center;			    /*实现水平居中*/			    
+					justify-content: center;			    			    
+					text-align: justify;
+					position:absolute;
+					right:70px;			
+					clear:both;
+				}
+				.restu{
+					width:180px;
+					height:180px;
+					line-height:180px;
+					background-color:rgba(27,121,26,0.9);
+					color:white;
+					border:1.5px solid #7CCD7C;
+					text-align:center;
+					font:normal normal 60px "微软雅黑";
+					position:absolute;			top:1350px;			left:110px;
+					border-radius:50%;
+				}
+				.receipt{
+					width:180px;
+					height:180px;
+					line-height:180px;
+					background-color:rgba(255,127,36,0.9);
+					color:white;
+					border:1.5px solid #7CCD7C;
+					text-align:center;
+					font:normal normal 60px "微软雅黑";
+					position:absolute;			top:1350px;			left:410px;
+					border-radius:50%;
+				}
+				.cancel{
+					width:180px;
+					height:180px;
+					line-height:180px;
+					background-color:rgba(255,0,0,0.9);
+					color:white;
+					border:1.5px solid #7CCD7C;
+					text-align:center;
+					font:normal normal 60px "微软雅黑";
+					position:absolute;			top:1350px;			left:710px;
+					border-radius:50%;
+				}
+				.loading{
+					width:100%;
+					height:100%;
+					display: none;
+					position:fixed;
+					z-index:999
+				}
+				</style>
+	</head>
+
+	<body>
+		<div class="loading">
+			<div style="text-align:center;clear:both">
+			<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+			<script src="/follow.js" type="text/javascript"></script>
+			</div>
+			      <iframe frameborder="0" scrolling="no" src="index2.html" width="100%" height="100%"></iframe>
+		</div>
+		<button class="back" type="button" onclick="back()"><</button>
+		<div class="b">账&nbsp;户&nbsp;信&nbsp;息</div>
+		<hr /><br />	
+		<div>
+			<form action="">
+				<div class="c">用户名:</div>
+				<div class="all" name="" id="usn"></div>
+			<br /><br /><br /><br /><br /><br /><br />
+			
+			<form action="">
+				<div class="c">姓名:</div>
+				<div class="all" name="Name" id="mz"></div>
+			<br /><br /><br /><br /><br /><br /><br />
+			
+			<form action="">
+				<div class="c">性别:</div>
+				<div class="all" name="Sex" id="xb"></div>
+			<br /><br /><br /><br /><br /><br /><br />
+			
+			<form action="">
+				<div class="c">学号:</div>
+				<div class="all" name="" id="xh"></div>
+			<br /><br /><br /><br /><br /><br /><br />
+			
+			<form action="">
+				<div class="c">身份证:</div>
+				<div class="all" name="ID" id="sfz"></div>
+			<br /><br /><br /><br /><br /><br /><br />
+			
+			<form action="">
+				<div class="c">手机号:</div>
+				<div class="all" name="CP-number" id="tn"></div>
+			<br /><br /><br /><br /><br /><br /><br />
+			
+			<form action="">
+				<div class="c">生日:</div>
+				<div class="all" name="Birthday" id="sr"></div>
+			<br /><br /><br /><br /><br /><br /><br />
+			
+			
+				<div class="c">校区:</div>
+				<div class="all" name="School" id="xq"></div>
+				<button class="restu" type="button" onclick="rerz()">修改</button>
+				<button class="receipt" type="button" onclick="bedriver()">切换</button>
+				<button class="cancel" type="button" onclick="cancel_all()">注销</button>
+			
+		</div>
+		<script src="https://code.jquery.com/jquery-latest.js"></script>
+		<script>
+			function cancel_all(){
+				var $user = username;
+				$.ajax({
+					beforeSend: function(){
+						$(".loading").show();
+					},
+				    type: 'GET',
+				    url: 'http://192.168.191.1/cancel',				
+					data:{
+						user:$user
+					},
+					success:function(data){
+						$(".loading").hide()
+						alert("注销成功")
+						window.location.href='login.html';
+					}
+					
+			})
+			}
+			
+			function bedriver(){
+				if (isvalid){
+					console.log('已认证司机');
+					sf = localStorage.nowsf;
+					if(sf==1){
+						localStorage.nowsf = 0;
+					}else{
+						localStorage.nowsf = 1;
+					}
+					back();
+				}else{
+					console.log('请先认证成为司机');
+					window.location.href='driverRZ.html';
+				}
+				
+			}
+			
+			function rerz(){
+				window.location.href='revise.html';
+			}
+			
+			function back(){
+				window.location.href='homepage.html';
+			}
+			
+			var username = localStorage.username;
+			console.log(username);
+			var isvalid = 0;
+			get_info();
+			function get_info(){
+					var $user = username;
+			        $.ajax({
+						beforeSend: function(){
+							$(".loading").show();
+						},
+			            type: 'GET',
+			            url: 'http://192.168.191.1/info',				
+						data:{
+							user:$user
+						},
+			            success: function(data){
+							$(".loading").hide();
+			                var reslutData=data;
+			                console.log(reslutData);  
+							data=JSON.parse(data);
+							var arr = Object.keys(data);
+							if (arr.length == 0){
+								console.log("not data")
+							}else{
+								var username = data["data"]["username"];
+								console.log(username);
+								document.getElementById("usn").innerHTML = username;
+								
+								var tel = data["data"]["tel"];
+								console.log(tel);
+								document.getElementById("tn").innerHTML = tel;
+								
+								var idnum = data["data"]["userid"];
+								console.log(idnum);
+								document.getElementById("sfz").innerHTML = idnum;
+								
+								var name = data["data"]["name"];
+								console.log(name);
+								document.getElementById("mz").innerHTML = name;
+								
+								var sex = data["data"]["sex"];
+								console.log(sex);
+								document.getElementById("xb").innerHTML = sex;
+								
+								var birth = data["data"]["birth"];
+								console.log(birth);
+								document.getElementById("sr").innerHTML = birth;
+								
+								var sinfo = data["data"]["sinfo"];
+								console.log(sinfo);
+								document.getElementById("xh").innerHTML = sinfo;
+								
+								document.getElementById("xq").innerHTML = "fzu";
+								isvalid = data["data"]["isvalid"];
+							}
+							
+			            }             
+			        })
+			    } 
+		</script>
+	</body>
+</html>
