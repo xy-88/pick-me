@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8" />
+		<title>Pick me</title>
+		<style>
+					* {
+				  margin: 0;
+				  padding: 0;
+				}
+				body{
+					background:url(img/zhu.png) 
+					top left;
+					background-size:100%;
+				}
+				/* .box{
+					width:55%;
+					height:1740px;
+					line-height: 1667px;
+					background-color: rgba(255,255,255,0.7);
+					position:relative;
+					z-index:998;
+				} */
+		        #container{  
+		            width:100%;  
+		            height:1740px;  
+					position:absolute;
+					left:0px;
+					top:0px;
+		        }
+				.round_icon{
+				  width: 200px;
+				  height: 200px;
+				  border-radius: 50%;
+				  /* display: flex;
+				  align-items: center;
+				  justify-content: center;
+				  overflow: hidden; */
+				  margin:auto;
+				  position: absolute;
+				  top:50px;
+				  left:170px;
+				}
+				.account{
+					width:539px;
+					height: 80px;
+					line-height: 80px;
+					color:rgba(0,0,0,0.8);
+					border:2px solid #8B8989;
+					text-align:center;
+					font:normal normal 50px "微软雅黑";
+					position: absolute;
+					top: 400px;
+					border-radius: 20px;
+				}
+				.fast-car{
+					width:539px;
+					height: 80px;
+					line-height: 80px;
+					color:rgba(0,0,0,0.8);
+					border:2px solid #8B8989;
+					text-align:center;
+					font:normal normal 50px "微软雅黑";
+					position: absolute;
+					top: 550px;
+					border-radius: 20px;
+				}
+				.free-car{
+					width:539px;
+					height: 80px;
+					line-height: 80px;
+					color:rgba(0,0,0,0.8);
+					border:2px solid #8B8989;
+					text-align:center;
+					font:normal normal 50px "微软雅黑";
+					position: absolute;
+					top: 700px;
+					border-radius: 20px;
+				}
+				.rent-car{
+					width:539px;
+					height: 80px;
+					line-height: 80px;
+					color:rgba(0,0,0,0.8);
+					border:2px solid #8B8989;
+					text-align:center;
+					font:normal normal 50px "微软雅黑";
+					position: absolute;
+					top: 850px;
+					border-radius: 20px;
+				}
+				.car-repair{
+					width:539px;
+					height: 80px;
+					line-height: 80px;
+					color:rgba(0,0,0,0.8);
+					border:2px solid #8B8989;
+					text-align:center;
+					font:normal normal 50px "微软雅黑";
+					position: absolute;
+					top: 1000px;
+					border-radius: 20px;
+				}
+				.history{
+					width:539px;
+					height: 80px;
+					line-height: 80px;
+					color:rgba(0,0,0,0.8);
+					border:2px solid #8B8989;
+					text-align:center;
+					font:normal normal 50px "微软雅黑";
+					position: absolute;
+					top: 1150px;
+					border-radius: 20px;
+				}
+				.exit{
+					width:150px;
+					height: 70px;
+					line-height: 70px;
+					color:white;
+					background-color: rgba(139,0,0,0.8);
+					text-align:center;
+					font:normal normal 40px "微软雅黑";
+					position: absolute;
+					left: 80%;
+					top: 3%;
+					border-radius: 10px;
+				}
+				.user{
+					width:300px;
+					height: 70px;
+					line-height: 70px;
+					color:rgba(104,34,139,0.8);
+					text-align:center;
+					font:normal bold 40px "微软雅黑";
+					position: absolute;
+					left: 45%;
+					top: 3%;
+					border-radius: 10px;
+				}
+				.mos{
+					width:220px;
+					height: 70px;
+					line-height: 70px;
+					color:white;
+					background-color: rgba(25,25,112,0.9);
+					text-align:center;
+					font:normal normal 40px "微软雅黑";
+					position: absolute;
+					left: 72%;
+					top: 82%;
+					border-radius: 10px;
+				}
+				.loading{
+					width:100%;
+					height:100%;
+					display: none;
+					position:fixed;
+					z-index:999
+				}
+				</style>
+	</head>
+
+	<body>
+		<img src="img/me.png" style="width: 550px; height:320px;  position: absolute; left: -95px; top: -70px;" />
+		<div class="user" name="" id="">xxx，你好！</div>
+		<button class="exit" type="button" onclick="quit()">退出</button>
+		<div class="mos" name="" id="">xx模式</div>
+		<div class="loading">
+			<div style="text-align:center;clear:both">
+			<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+			<script src="/follow.js" type="text/javascript"></script>
+			</div>
+			<iframe frameborder="0" scrolling="no" src="index2.html" width="100%" height="100%"></iframe>
+		</div>
+		<button onclick="tz1()">
+			<img src="img/zh.png" style="width: 230px; height:210px;  position: absolute; left: 22%; top: 27%;" />
+		</button>
+		<button onclick="tz2()">
+			<img src="img/kc.png" style="width: 230px; height:210px;  position: absolute; left: 56%; top: 27%;" />
+		</button>
+		<button onclick="tz3()">
+		<img src="img/xc.png" style="width: 230px; height:210px;  position: absolute; left: 22%; top: 40%;" />
+		</button>
+		<button onclick="tz4()">
+		<img src="img/sfc.png" style="width: 230px; height:210px;  position: absolute; left: 56%; top: 40%;" />
+		</button>
+		<button onclick="tz5()">
+		<img src="img/gy.png" style="width: 230px; height:210px;  position: absolute; left: 22%; top: 53%;" />
+		</button>
+		<button onclick="tz6()">
+		<img src="img/dzc.png" style="width: 230px; height:210px;  position: absolute; left: 56%; top: 53%;" />
+		</button>
+		<script src="../public/js/jquery-3.0.0.min.js"></script>
+		<script src="http://webapi.amap.com/maps?v=1.4.0&amp;key=88677a1eeae5f527e0cbf0d0a537de11&callback=init"></script>
+		<script src="https://code.jquery.com/jquery-latest.js"></script>
+		<script> var j = jQuery.noConflict(true); </script>
+		<script>
+			
+			var isdvalid = localStorage.isdv;
+			var sf = localStorage.nowsf;
+			var username = localStorage.username;
+			console.log('user: '+username);
+			console.log('sf: '+ sf)
+			console.log('isdvalid: '+ isdvalid);
+			var iswait = localStorage.waitoid;
+			console.log(iswait);
+			var ti1 = new Date();
+			//查询订单进行中
+			requry();
+			console.log('wait')
+			function requry(){
+				
+				var juser = username;
+				var jty = sf;
+				j.ajax({
+					beforeSend: function(){
+						j(".loading").show();
+					},
+				    type: 'GET',
+				    url: 'http://47.94.231.254:8888/requery',				
+					data:{
+						user:juser,
+						type:jty
+					},
+				    success: function(data){
+						j(".loading").hide();
+				        var reslutData=data;
+				        console.log(reslutData);    
+				        //$('#reslut1').text(data["msg"]);
+						data=JSON.parse(data);
+						if (data["status"] == 1){
+							console.log(data["msg"]);
+							if (data["data"]["isfast"] > 0){
+								//快车进行页
+								if (sf == 0){
+									localStorage.dname = data["data"]["dname"];
+									localStorage.st = data["data"]["st"];
+									localStorage.end = data["data"]["end"];
+									localStorage.dtel = data["data"]["dtel"];
+									window.location.href='DDingS.html';
+								}else{
+									localStorage.sname = data["data"]["sname"];
+									localStorage.st = data["data"]["st"];
+									localStorage.end = data["data"]["end"];
+									localStorage.stel = data["data"]["stel"]
+									
+									window.location.href='DDingD.html';
+									
+								}
+							}else{
+								if (data["data"]["isfree"] > 0){
+									//顺风车进行页
+									if (sf == 0){
+										localStorage.dname = data["data"]["dname"];
+										localStorage.st = data["data"]["st"];
+										localStorage.end = data["data"]["end"];
+										localStorage.dtel = data["data"]["dtel"];
+										window.location.href='DDingS.html';
+									}else{
+										localStorage.sname = data["data"]["sname"];
+										localStorage.st = data["data"]["st"];
+										localStorage.end = data["data"]["end"];
+										localStorage.stel = data["data"]["stel"]
+										
+										window.location.href='DDingD.html';
+										
+									}
+								}
+							}
+						}else{
+							console.log(data["msg"]);
+						}
+				    } ,
+					error:function(XMLHttpRequest, textStatus, errorThrown){
+						j(".loading").hide();
+						console.log(XMLHttpRequest.status);
+						// 状态
+						console.log(XMLHttpRequest.readyState);
+						// 错误信息   
+						// console.log(textStatus);
+						// alert("error:"+XMLHttpRequest.status);
+					}
+				})
+				
+			}
+			
+		   
+			
+			function tz1(){
+				window.location.href='account.html';
+			}
+			function tz2(){
+				console.log(sf)
+				if (isdvalid==1 && sf==1){
+					console.log(isdvalid+sf)
+					window.location.href='fast-car2(1).html';
+				}else{
+					window.location.href='fast-car(1)(2).html';
+				}
+				
+			}
+			function tz3(){
+				window.location.href='history.html';
+			}
+			function tz4(){
+				if (isdvalid==1 && sf==1){
+					console.log(isdvalid+sf)
+					window.location.href='free-car2.html';
+				}else{
+					window.location.href='free-car.html';
+				}
+			}
+			function tz6(){
+				console.log(sf)
+				if (isdvalid==1 && sf==1){
+					console.log(isdvalid+sf)
+					window.location.href='rent-car2.html';
+				}else{
+					window.location.href='rent-car.html';
+				}
+			}
+			function quit(){
+				localStorage.clear();
+				window.location.href='login.html';
+			}
+		</script>
+	</body>
+</html>

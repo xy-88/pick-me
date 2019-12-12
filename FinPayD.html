@@ -1,114 +1,181 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8" />
-
-  <!-- <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script> -->
-  <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=wqBXfIN3HkpM1AHKWujjCdsi"></script>
-  <script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
-
-  <style>
-    * {
+	<head>
+		<meta charset="UTF-8" />
+		<title>Pick me</title>
+		<!-- <script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/1.7.2/jquery.min.js"></script> -->
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=wqBXfIN3HkpM1AHKWujjCdsi"></script>
+		<script type="text/javascript" src="http://developer.baidu.com/map/jsdemo/demo/convertor.js"></script>
+		<script src="https://code.jquery.com/jquery-latest.js"></script>
+		<style>
+			* {
       margin: 0;
       padding: 0;
     }
-    .a{
-      width:100%;
-      height:120px;
-      line-height:120px;
-      background-color:rgba(193,205,193,0.3);
-      border:1.5px solid #CDC9C9;
-      text-align:center;
-      font:normal normal 65px "Comic Sans MS";
-    }
-    .b{
-      width:88%;
-      height:100px;
-      line-height:110px;
-      background-color:white;
-      text-align:center;
-      color: red;
-      font:normal normal 60px "微软雅黑";
-    }
-    .back{
-      width:15%;
-      height:100px;
-      line-height:110px;
-      background-color:white;
-      border:1px solid white;
-      text-align:center;
-      font:normal bold 80px "幼圆";
-      float:left;
-    }
+		.a{
+			width:100%;
+			height:120px;
+			line-height:120px;
+			background-color:rgba(193,205,193,0.3);
+			border:1.5px solid #CDC9C9;
+			text-align:center;
+			font:normal normal 65px "Comic Sans MS";
+		}
+		.b{
+			width:88%;
+			height:110px;
+			line-height:110px;
+			color:red;
+			background-color:white;
+			text-align:center;
+			font:normal normal 65px "微软雅黑";
+			
+		}
+		.back{
+			width:15%;
+			height:110px;
+			line-height:110px;
+			background-color:white;
+			border:1px solid white;
+			text-align:center;
+			font:normal bold 80px "幼圆";
+			float:left;
+			}
     .c{
-      width:75%;
-      height:55px;
-      line-height:110px;
-      color:rgba(0,0,0,0.7);
-      background-color:aliceblue;
-      text-align:left;
-      font:normal normal 35px "微软雅黑";
-      float:left;
+      width:100%;
+      height:350px;
+      background-color:rgba(255,255,250,0.6);
+      border-radius: 20px;
+      position: relative;
     }
     .c1{
-      width:30%;
-      height:150px;
+      width:300px;
+      height:110px;
       line-height:110px;
       color:rgba(0,0,0,0.7);
       background-color:white;
-      text-align:left;
+      /* border:1.5px solid #8B8989; */
+      text-align:center;
       font:normal normal 55px "微软雅黑";
       float:left;
+    }
+    .all1{
+    	width:674px;
+    	height:110px;
+    	line-height:110px;
+    	color:black;
+    	background-color:white;
+    	/* border:1.5px solid #8B8989; */
+    	text-align:center;
+    	font:normal normal 45px "微软雅黑";
+    	float:left;
     }
     .c2{
-      width:45%;
-      height:27px;
-      line-height:110px;
-      color:rgba(0,0,0,0.7);
-      background-color:white;
-      text-align:left;
-      font:normal normal 35px "微软雅黑";
-      position: absolute;
-      left: 30%;
-      top: 222px;
-    }
-    .c5{
-      width:45%;
-      height:28px;
-      line-height:110px;
-      color:rgba(0,0,0,0.7);
-      background-color:white;
-      text-align:left;
-      font:normal normal 35px "微软雅黑";
-      position: absolute;
-      left: 30%;
-      top: 285px;
-    }
-
-    .c4{
-      width:75%;
-      height:95px;
-      line-height:110px;
-      color:rgba(0,0,0,0.7);
-      background-color: aliceblue;
-      text-align:center;
-      color: red;
-      font:normal normal 55px "微软雅黑";
-      float:left;
-    }
-    .all{
-      width:25%;
-      height:300px;
+      width:100%;
+      height:110px;
       line-height:110px;
       color:#838B83;
       background-color:white;
-      border:1.5px solid #7CCD7C;
+      /* border:1.5px solid #8B8989; */
       text-align:center;
       font:normal normal 50px "微软雅黑";
-      position: absolute;
-      left: 75%;
-      top: 222px;
+      float:left;
     }
+    .c3{
+      width:100%;
+      height:110px;
+      line-height:110px;
+      color:#838B83;
+      background-color:white;
+      /* border:1.5px solid #8B8989; */
+      text-align:center;
+      font:normal normal 50px "微软雅黑";
+      float:left;
+    }
+    .all{
+    	width:674px;
+    	height:110px;
+    	line-height:110px;
+    	color:#838B83;
+    	background-color:white;
+    	/* border:1.5px solid #8B8989; */
+    	text-align:center;
+    	font:normal normal 50px "微软雅黑";
+    	float:left;
+    }
+    .c4{
+      width:300px;
+      height:110px;
+      line-height:110px;
+      color:rgba(0,0,0,0.7);
+      background-color:white;
+      /* border:1.5px solid #8B8989; */
+      text-align:center;
+      font:normal normal 50px "微软雅黑";
+      float:left;
+    }
+    .all4{
+    	width:674px;
+    	height:110px;
+    	line-height:110px;
+    	color:black;
+    	background-color:white;
+    	/* border:1.5px solid #8B8989; */
+    	text-align:center;
+    	font:normal normal 45px "微软雅黑";
+    	float:left;
+    }
+    .c5{
+      width:300px;
+      height:110px;
+      line-height:110px;
+      color:rgba(0,0,0,0.7);
+      background-color:white;
+      /* border:1.5px solid #8B8989; */
+      text-align:center;
+      font:normal normal 50px "微软雅黑";
+      float:left;
+    }
+    .all5{
+    	width:674px;
+    	height:110px;
+    	line-height:110px;
+    	color:red;
+    	background-color:white;
+    	/* border:1.5px solid #8B8989; */
+    	text-align:center;
+    	font:normal normal 60px "微软雅黑";
+    	float:left;
+    }
+    .d1{
+      width:30%;
+      height:80px;
+      background-color:rgba(255,127,36,0.9);
+      color:white;
+      /* border:1.5px solid #8B8989; */
+      text-align:center;
+      font:normal normal 55px "微软雅黑";
+      border-radius:10px;
+      position:fixed;
+      left:15%;
+      top:85%;
+      z-index:999999;
+    }
+    .d2{
+      width:30%;
+      height:80px;
+      background-color:rgba(255,127,36,0.9);
+      color:white;
+      /* border:1.5px solid #8B8989; */
+      text-align:center;
+      font:normal normal 50px "微软雅黑";
+      border-radius:10px;
+      position: fixed;
+      left:55%;
+      top:85%;
+      z-index:999999;
+    }
+
     .call{
       width:100%;
       height:120px;
@@ -123,7 +190,8 @@
     }
     #container{
       width:100%;
-      height: 1223px;
+      height: 1500px;
+	  position: absolute;
     }
     .clear{
       clear:both;
@@ -132,39 +200,96 @@
 </head>
 
 <body>
-<div class="a">pick me</div>
-<button class="back" type="button"><</button>
-<div class="b">订单进行中</div>
-<form action="">
-  <div class="c1">乘客ID </div>
-  <div class="c2">乘客上车点 </div>
-  <div class="c5">乘客目的地</div>
-  <div class="all">头像 </div>
-  <div class="c">预估价格 </div>
-  <div class="c4">价格 </div>
-
-  <div class="clear"></div>
-  <div id="container"></div>
-  <img src="../img/photo/payS.png" height="99" width="688" style="position: fixed;z-index: 2;left: 15%;top: 1000px"/>
-  <script type="text/javascript" style="position: relative;z-index: 1">
-      // 创建地图实例，避免与Map重名，所以使用BMap.Map
-      var map = new BMap.Map("container");
-      // 创建点坐标
-      var point = new BMap.Point(113.946317, 22.549008);
-      // 初始化地图，设置中心点坐标和地图级别 1~18级
-      map.centerAndZoom(point, 18);
-      //鼠标滚动，地图缩放
-      map.enableScrollWheelZoom(true);
-      //添加地图控件
-      map.addControl(new BMap.NavigationControl());               // 添加平移缩放控件
-      map.addControl(new BMap.ScaleControl());                    // 添加比例尺控件
-      map.addControl(new BMap.OverviewMapControl());              //添加缩略地图控件
-      map.enableScrollWheelZoom();                            //启用滚轮放大缩小
-      map.addControl(new BMap.MapTypeControl());          //添加地图类型控件
-      map.setCurrentCity("福州");          // 设置地图显示的城市 此项是必须设置的
-      //添加地图标注
-      var marker = map.addOverlay(new BMap.Marker(point));
-  </script>
-</body>
+		<div style="position: relative;">
+			<div class="a">pick me</div>
+			<button class="back" type="button" onclick="back()"><</button> 
+			<div class="b">订单进行中</div>
+			<div class="c">
+				<form action="">
+					<div class="c1" id="name">乘客ID </div>
+					<div class="all1" id="name">订单开始时间 </div>
+					<div class="c2" id="startpoint">乘客上车点</div>
+					<div class="c3" id="endpoint">乘客目的地</div>
+					<div class="c4">联系电话</div>
+					<div class="all4" id="tel">11111111111</div>
+					<div class="c5">预估价格 </div>
+					<div class="all5">价格 </div>
+			</div>
+			<div class="clear"></div>
+			<div id="container"></div>
+		</div>
+		<img src="./img/photo/payS.png" height="120" width="699" style="position: fixed;z-index: 2;left: 15%;top: 900px"/>
+		<script src="../public/js/jquery-3.0.0.min.js"></script>
+		<script src="http://webapi.amap.com/maps?v=1.4.0&amp;key=88677a1eeae5f527e0cbf0d0a537de11&callback=init"></script>
+		<script>
+			function init() {
+				var map, geolocation;
+				//        实例化地图
+				var map = new AMap.Map('container', {
+					//            resizeEnable: true,
+				});
+				//        配置插件AMap.Geolocation
+				map.plugin('AMap.Geolocation', function() {
+					geolocation = new AMap.Geolocation({
+						enableHighAccuracy: false, //是否使用高精度定位，默认:true
+						timeout: 10000, //超过10秒后停止定位，默认：无穷大
+						maximumAge: 0, //定位结果缓存0毫秒，默认：0
+						convert: true, //自动偏移坐标，偏移后的坐标为高德坐标，默认：true
+						showButton: true, //显示定位按钮，默认：true
+						buttonPosition: 'LB', //定位按钮停靠位置，默认：'LB'，左下角
+						buttonOffset: new AMap.Pixel(10, 20), //定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
+						showMarker: true, //定位成功后在定位到的位置显示点标记，默认：true
+						showCircle: true, //定位成功后用圆圈表示定位精度范围，默认：true
+						panToLocation: true, //定位成功后将定位到的位置作为地图中心点，默认：true
+						zoomToAccuracy: true //定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false
+					});
+					map.addControl(geolocation);
+					geolocation.getCurrentPosition();
+					AMap.event.addListener(geolocation, 'complete', onComplete); //返回定位信息
+					AMap.event.addListener(geolocation, 'error', onError); //返回定位出错信息
+					//  把当前的位置信息放到页面中
+					function onComplete(data) {
+						$('#container').html(data.formattedAddress)
+					}
+					//            如果报错把报错信息输出
+					function onError(data) {
+						console.log(data)
+					}
+		
+				});
+			}
+		
+			function back() {
+				window.location.href = 'homepage.html';
+			}
+		</script>
+		<script>
+			var $user = localStorage.username;
+			getfreecardata();
+			function getfreecardata(){
+				$.ajax({
+				    type: 'GET',
+				    url: 'http://47.94.231.254:8888/requery',
+				        //dataType:'jsonp',
+					data:{
+						user: $user,
+						type:'1'
+					},
+				    success: function(data){
+				        var reslutData=data;
+				        console.log(reslutData);  
+						var data =JSON.parse(data);
+						$('#name').text(data["data"]["sname"]);
+						$('#startpoint').text(data["data"]["st"]);
+						$('#endpoint').text(data["data"]["end"]);
+						$('#tel').text(data["data"]["stel"]);
+						
+				    }             
+				})
+				
+					
+			
+			}
+		</script>
+	</body>
 </html>
-
